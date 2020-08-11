@@ -44,4 +44,4 @@ Then, setup the example with your configuration:
 | Client Secret             | The value named `Client secret` in the console.|
 | TV Authorization Endpoint | https://oauth2.googleapis.com/device/code |
 | Token Endpoint            | https://oauth2.googleapis.com/token |
-| User Info Endpoint        | https://www.googleapis.com/oauth2/v3/userinfo |
+| User Info Endpoint        | https://openidconnect.googleapis.com/v1/userinfo |
