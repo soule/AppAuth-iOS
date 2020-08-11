@@ -36,3 +36,12 @@ Then, setup the example with your configuration:
 | Client Secret | The value named `Client secret` in the console.|
 | Redirect URI  | For macOS, you can use either the loopback interface (where AppAuth will generate the redirect URI for you), or a custom scheme. To create a custom scheme redirect URI, reverse the client id to get the URI scheme, for example `	com.googleusercontent.apps.IDENTIFIER` and, add your own path component. E.g. `com.googleusercontent.apps.IDENTIFIER:/oauth2redirect/google`. Note that there is only a single slash (`/`) after the scheme.| 
 
+## tvOS
+
+| Configuration             | Description      |
+|---------------------------|------------------|
+| Client ID                 | The value named `Client ID` in the console, has the format `IDENTIFIER.apps.googleusercontent.com`.|
+| Client Secret             | The value named `Client secret` in the console.|
+| TV Authorization Endpoint | https://oauth2.googleapis.com/device/code |
+| Token Endpoint            | https://oauth2.googleapis.com/token |
+| User Info Endpoint        | https://www.googleapis.com/oauth2/v3/userinfo |
