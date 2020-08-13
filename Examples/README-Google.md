@@ -38,10 +38,15 @@ Then, setup the example with your configuration:
 
 ## tvOS
 
+Select "TVs and Limited Input devices" as the application type.
+
+Then, setup the example with your configuration. Please see the [Example-tvOS README](./Example-tvOS/README.md) to know which values are needed for your use case.
+
 | Configuration             | Description      |
 |---------------------------|------------------|
 | Client ID                 | The value named `Client ID` in the console, has the format `IDENTIFIER.apps.googleusercontent.com`.|
 | Client Secret             | The value named `Client secret` in the console.|
-| TV Authorization Endpoint | https://oauth2.googleapis.com/device/code |
-| Token Endpoint            | https://oauth2.googleapis.com/token |
-| User Info Endpoint        | https://openidconnect.googleapis.com/v1/userinfo |
+| Issuer                    | `https://accounts.google.com` |
+| TV Authorization Endpoint | `https://oauth2.googleapis.com/device/code` |
+| Token Endpoint            | `https://oauth2.googleapis.com/token` |
+| User Info Endpoint        | `https://openidconnect.googleapis.com/v1/userinfo` |
