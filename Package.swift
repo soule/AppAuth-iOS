@@ -37,7 +37,10 @@ let package = Package(
             targets: ["AppAuth"]),
         .library(
 	        name: "AppAuthEnterpriseUserAgent",
-	        targets: ["AppAuthEnterpriseUserAgent"])
+	        targets: ["AppAuthEnterpriseUserAgent"]),
+        .library(
+            name: "AppAuthTV",
+            targets: ["AppAuthTV"])
     ],
     dependencies: [],
     targets: [
@@ -68,17 +71,28 @@ let package = Package(
                 .headerSearchPath("iOS"),
             ]
         ),
+        .target(
+            name: "AppAuthTV",
+            dependencies: ["AppAuthCore"],
+            path: "Source/AppAuthTV",
+            publicHeadersPath: ""
+        ),
         .testTarget(
             name: "AppAuthCoreTests",
             dependencies: ["AppAuthCore"],
             path: "UnitTests",
-            exclude: ["OIDSwiftTests.swift"]
+            exclude: ["OIDSwiftTests.swift", "AppAuthTV"]
         ),
         .testTarget(
             name: "AppAuthCoreSwiftTests",
             dependencies: ["AppAuthCore"],
             path: "UnitTests",
             sources: ["OIDSwiftTests.swift"]
-        )
+        ),
+        .testTarget(
+            name: "AppAuthTVTests",
+            dependencies: ["AppAuthTV"],
+            path: "UnitTests/AppAuthTV"
+        ),
     ]
 )
